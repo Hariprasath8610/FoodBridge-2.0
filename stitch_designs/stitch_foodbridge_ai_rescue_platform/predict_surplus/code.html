@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed": "#2a1700", "on-secondary-container": "#006f64", "tertiary-fixed-dim": "#ffb95f", "primary-container": "#0f766e", "on-primary-fixed": "#00201d", "background": "#faf8ff", "secondary-fixed-dim": "#4fdbc8", "tertiary": "#734700", "surface-container-low": "#f2f3ff", "surface-container-lowest": "#ffffff", "surface-bright": "#faf8ff", "on-error-container": "#93000a", "on-primary-container": "#a3faef", "on-primary": "#ffffff", "primary-fixed-dim": "#80d5cb", "inverse-surface": "#283044", "on-secondary-fixed": "#00201c", "on-surface": "#131b2e", "on-tertiary-fixed-variant": "#653e00", "on-error": "#ffffff", "on-secondary-fixed-variant": "#005048", "tertiary-fixed": "#ffddb8", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#00504a", "error-container": "#ffdad6", "secondary": "#006b5f", "secondary-container": "#6df5e1", "error": "#ba1a1a", "surface-container-highest": "#dae2fd", "surface-container": "#eaedff", "surface": "#faf8ff", "surface-tint": "#006a63", "outline": "#6e7977", "on-tertiary-container": "#ffe6cc", "primary-fixed": "#9cf2e8", "tertiary-container": "#945d00", "surface-variant": "#dae2fd", "inverse-on-surface": "#eef0ff", "inverse-primary": "#80d5cb", "surface-container-high": "#e2e7ff", "on-secondary": "#ffffff", "outline-variant": "#bdc9c6", "on-background": "#131b2e", "surface-dim": "#d2d9f4", "on-surface-variant": "#3e4947", "primary": "#005c55", "secondary-fixed": "#71f8e4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin": "2rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem" }, "fontFamily": { "display-hero-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-xl": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "data-display": ["Plus Jakarta Sans"], "label-md": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "body-md": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"] }, "fontSize": { "display-hero-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-xl": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "data-display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface flex flex-col antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-28 px-margin-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="FoodBridge Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XIcN2yCZw3BOuPfdl9AiFHDxotREWrcLejBlCaseTLIai6oi0O632sDt9pArw9YmjVOgl7g0VS1TgOY3EYsLISuzD7A0KAl2PTXw805tVin8ouq-l_ccCzlUe0AVFRQu1DDLjQSv5x6Khhyh5QEVt1dSCl9qSbvZiYUb-73dbXAAauqd5upG1xd6hGr603FHDNzPPs4cyN8VcUzPrqxXPjGLY7N84e0lUab0IhNVyUS4PVgIq6hZMgAg"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate">FoodBridge</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Predict Surplus</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><button class="h-7 px-2.5 rounded-full bg-surface-container-low text-primary flex items-center gap-1 hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[14px]">play_circle</span><span class="font-label-sm text-label-sm font-semibold">Demo Scenario</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container/30"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-secondary-container font-medium">AI Engine Online</span></div><div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-low"><span class="material-symbols-outlined text-[13px] text-primary">cloud_done</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Weather Connected</span></div><div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-low"><span class="material-symbols-outlined text-[13px] text-secondary">sensors</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Cold-Chain Live</span></div></div></div></header><main class="flex flex-col relative w-full pt-28 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Content Area -->
+<div class="px-margin-mobile py-space-sm space-y-space-md">
+<!-- Hero / Intro Header -->
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container/40">
+<span class="material-symbols-outlined text-[14px] text-secondary">psychology</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container uppercase tracking-wider font-semibold">Predictive Telemetry v4.2</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface font-bold tracking-tight">Predict Surplus</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Tell us what you're preparing. FoodBridge estimates what may remain before it becomes waste.</p>
+</div>
+<!-- 1. Input Form Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">restaurant_menu</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Event &amp; Kitchen Details</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-primary font-medium">Auto-Sync</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Event Type -->
+<div class="col-span-2 space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Event Type</label>
+<div class="relative bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">celebration</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Wedding Banquet</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Expected Guests & Planned Meals -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Expected Guests</label>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[16px]">group</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">500</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Planned Meals</label>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[16px]">skillet</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">500</span>
+</div>
+</div>
+<!-- Current Attendance & Food Type -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Current Attendance</label>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">how_to_reg</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">430</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">86%</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Food Category</label>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">spa</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Vegetarian</span>
+</div>
+</div>
+<!-- Serving Time & Location -->
+<div class="col-span-2 space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Serving Window</label>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">7:30 PM (Dinner Shift)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">In 15 mins</span>
+</div>
+</div>
+<div class="col-span-2 space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Dispatch Origin</label>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">pin_drop</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Grand Palace Pavilion</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Sector 4, Downtown Metro Hub</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full h-11 bg-primary text-on-primary rounded-xl font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-all hover:bg-primary-container" id="runPredictionBtn">
+<span>Recalculate AI Prediction</span>
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:translate-x-0.5">arrow_forward</span>
+</button>
+</div>
+<!-- 2. Live Context / AI Data Panel -->
+<div class="bg-surface-container rounded-2xl p-space-md space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          AI Context • Live API
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sync</span> Refreshed 2m ago
+        </span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs pt-1">
+<!-- Weather -->
+<div class="bg-surface-container-lowest rounded-xl p-2.5 flex flex-col justify-between">
+<div class="flex items-center justify-between text-tertiary">
+<span class="material-symbols-outlined text-[20px]">thunderstorm</span>
+<span class="font-label-sm text-label-sm font-bold">75%</span>
+</div>
+<div class="mt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant block font-medium">Weather</span>
+<span class="font-body-sm text-body-sm text-tertiary font-semibold block truncate">Heavy Rain</span>
+</div>
+</div>
+<!-- Historical Pattern -->
+<div class="bg-surface-container-lowest rounded-xl p-2.5 flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span class="font-label-sm text-label-sm font-bold">86%</span>
+</div>
+<div class="mt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant block font-medium">Historical</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold block truncate">30+ Events</span>
+</div>
+</div>
+<!-- Current Attendance Velocity -->
+<div class="bg-surface-container-lowest rounded-xl p-2.5 flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+<span class="font-label-sm text-label-sm font-bold">430</span>
+</div>
+<div class="mt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant block font-medium">Check-In</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold block truncate">Velocity 86%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Simulated AI Processing State Indicator -->
+<div class="bg-surface-container-low rounded-2xl p-space-md space-y-2.5 transition-all" id="aiProcessingState">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] animate-spin">autorenew</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Continuous Engine Synthesis</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Ready</span>
+</div>
+<div class="space-y-1.5">
+<div class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="truncate">Analyzing real-time check-in stream (430 verified)</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="truncate">Checking storm velocity and transit delay alerts</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="truncate">Correlating 30+ regional wedding catering profiles</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-primary text-[16px] animate-pulse">insights</span>
+<span class="truncate">Surplus confidence calibrated to 84%</span>
+</div>
+</div>
+<!-- Micro Progress Bar -->
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-full transition-all duration-500"></div>
+</div>
+</div>
+<!-- 4. Visually Powerful AI Result Card (Obsidian Dark Surface #0F172A) -->
+<div class="bg-inverse-surface rounded-2xl p-space-md text-inverse-on-surface shadow-xl space-y-space-md relative overflow-hidden">
+<!-- Ambient Glow Decorator -->
+<div class="absolute -top-16 -right-16 w-36 h-36 rounded-full bg-primary-container/30 blur-2xl pointer-events-none"></div>
+<!-- Header Row -->
+<div class="flex items-center justify-between relative z-10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">smart_toy</span>
+<span class="font-label-sm text-label-sm font-bold tracking-widest text-surface-dim uppercase">FoodBridge AI Prediction</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest/10 text-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider uppercase">Model • Live</span>
+</div>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-sm pt-1 relative z-10">
+<!-- Expected Consumption -->
+<div class="bg-surface-container-lowest/5 rounded-xl p-space-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-surface-dim uppercase tracking-wider">Expected Intake</span>
+<div class="my-1">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-surface-bright">425–440</span>
+</div>
+<span class="font-body-sm text-body-sm text-surface-dim">Meals consumed by guests</span>
+</div>
+<!-- Dominant Potential Surplus -->
+<div class="bg-primary-container/20 rounded-xl p-space-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">Predicted Surplus</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">verified</span>
+</div>
+<div class="my-1">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-secondary-container">60–75</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Rescueable hot meals</span>
+</div>
+</div>
+<!-- Risk & Probability Bar -->
+<div class="bg-surface-container-lowest/5 rounded-xl p-space-sm space-y-2 relative z-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error/20 text-error-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+              HIGH SURPLUS RISK
+            </span>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-body-sm text-surface-dim">Surplus Probability:</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary-container ml-1">84%</span>
+</div>
+</div>
+<!-- Risk Segment Gauge -->
+<div class="space-y-1">
+<div class="grid grid-cols-3 gap-1.5 h-2 w-full">
+<div class="rounded-full bg-surface-container-lowest/20"></div>
+<div class="rounded-full bg-surface-container-lowest/30"></div>
+<div class="rounded-full bg-tertiary-fixed-dim"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-surface-dim px-0.5">
+<span>Low Risk</span>
+<span>Medium</span>
+<span class="text-tertiary-fixed font-semibold">High Exposure ★</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Explainable AI Section -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">explore</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Why is surplus predicted?</h3>
+</div>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">Factor weights</a>
+</div>
+<div class="space-y-2">
+<!-- Weather Factor -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-start gap-3 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/10 flex items-center justify-center text-tertiary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">rainy</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold text-sm">Weather Impact</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">-12% Arrival</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Heavy downpour causes regional travel slowdowns; late arrivals typically forgo main buffet service.</p>
+</div>
+</div>
+<!-- Attendance Velocity Factor -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-start gap-3 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/30 flex items-center justify-center text-secondary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">group_remove</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold text-sm">Attendance Trajectory</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">430 / 500 Guests</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Check-in velocity flattened at 7:15 PM, projecting a final attendance threshold well below the planned meal ceiling.</p>
+</div>
+</div>
+<!-- Historical Benchmark Factor -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-start gap-3 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold text-sm">Historical Pattern</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">86% Consumption</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Similar downtown banquets averaged 0.86 portions per checked-in guest with comparable multi-course vegetarian menus.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 6. Recommended Rescue Window -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">timelapse</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Recommended Rescue Window</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm font-semibold">Optimal Safe Transit</span>
+</div>
+<!-- Timeline Graphic -->
+<div class="space-y-2 pt-2">
+<div class="relative w-full py-3">
+<!-- Track Base -->
+<div class="h-2 w-full bg-surface-container rounded-full relative overflow-hidden">
+<!-- Optimal Safe Active Sub-range -->
+<div class="absolute left-[30%] right-[15%] h-full bg-primary-container rounded-full"></div>
+</div>
+<!-- Pinned Optimal Dot and Tag -->
+<div class="absolute left-[55%] -top-1 -translate-x-1/2 flex flex-col items-center">
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm whitespace-nowrap">
+              ↑ Optimal 8:30 PM
+            </span>
+<div class="w-3 h-3 rounded-full bg-primary ring-4 ring-on-primary mt-0.5"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant px-1">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">7:45 PM</span>
+<span>Buffet Concludes</span>
+</div>
+<div class="flex flex-col text-center">
+<span class="text-primary font-semibold">90m Freshness Window</span>
+<span class="text-[10px]">HACCP Temp Controlled</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-bold text-on-surface">9:15 PM</span>
+<span>Safety Cutoff</span>
+</div>
+</div>
+</div>
+<!-- Human in the Loop Note -->
+<div class="rounded-xl bg-surface-container-low p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">security</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface font-semibold">Human-in-the-loop Protocol:</strong> Kitchen chef verification of temperature (&gt;60°C hot hold) required prior to vehicle handoff.
+        </span>
+</div>
+</div>
+<!-- 7. Primary Actions -->
+<div class="pt-1 pb-4 space-y-2">
+<button class="w-full h-12 bg-primary text-on-primary rounded-xl font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-2 shadow-md active:scale-[0.99] transition-all hover:bg-primary-container">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+<span>Find Verified Recipients</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full h-10 bg-surface-container-lowest text-primary rounded-xl font-label-md text-label-md font-medium flex items-center justify-center gap-1.5 shadow-sm hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Adjust Inputs &amp; Constraints</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const btn = document.getElementById('runPredictionBtn');
+    const stateContainer = document.getElementById('aiProcessingState');
+    
+    if (btn && stateContainer) {
+      btn.addEventListener('click', function() {
+        btn.classList.add('opacity-75');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span><span>Recalculating with live feeds...</span>';
+        
+        setTimeout(function() {
+          btn.classList.remove('opacity-75');
+          btn.innerHTML = originalText;
+          stateContainer.classList.add('ring-2', 'ring-secondary-container');
+          setTimeout(() => stateContainer.classList.remove('ring-2', 'ring-secondary-container'), 1200);
+        }, 800);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm tracking-tight">Overview</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-primary font-semibold" data-path="predict-surplus" href="#"><span class="material-symbols-outlined text-[22px]">online_prediction</span><span class="font-label-sm text-label-sm tracking-tight">Predict</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="recipients" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm tracking-tight">Recipients</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="rescue-missions" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Missions</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="impact" href="#"><span class="material-symbols-outlined text-[22px]">eco</span><span class="font-label-sm text-label-sm tracking-tight">Impact</span></a></div></nav></body></html>
