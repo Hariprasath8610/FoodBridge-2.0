@@ -20,8 +20,15 @@ class ServerConfig {
 
 class ServerConfigNotifier extends StateNotifier<ServerConfig> {
   static const String _prefKey = 'foodbridge_server_base_url';
-  // Default to emulator/localhost friendly, but fully configurable at runtime
-  static const String defaultBaseUrl = 'http://10.0.2.2:8000';
+
+  /// Configurable at build-time via `--dart-define=API_BASE_URL=http://<IP>:8000`
+  /// Defaults to the active host Wi-Fi LAN IP (10.56.58.44:8000) for real Android device access
+  static const String configuredApiUrl = String.fromEnvironment(
+    'API_BASE_URL',
+    defaultValue: 'http://10.56.58.44:8000',
+  );
+
+  static const String defaultBaseUrl = configuredApiUrl;
 
   ServerConfigNotifier() : super(const ServerConfig(baseUrl: defaultBaseUrl)) {
     _loadFromPreferences();

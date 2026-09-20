@@ -78,8 +78,8 @@ def seed_database():
                 role=UserRole.SENDER.value,
                 verification_status=VerificationStatus.VERIFIED.value,
                 phone="+91 98450 11111",
-                latitude=12.9784,
-                longitude=77.6408,  # Indiranagar, Bangalore
+                latitude=11.0180,
+                longitude=76.9600,  # Race Course, Coimbatore
                 created_at=now - timedelta(days=30),
             ),
             User(
@@ -91,8 +91,8 @@ def seed_database():
                 role=UserRole.SENDER.value,
                 verification_status=VerificationStatus.VERIFIED.value,
                 phone="+91 98450 22222",
-                latitude=13.0033,
-                longitude=77.5891,  # Palace Grounds, Bangalore
+                latitude=11.0180,
+                longitude=76.9600,  # Grand Palace / Race Course, Coimbatore
                 created_at=now - timedelta(days=45),
             ),
             User(
@@ -104,8 +104,8 @@ def seed_database():
                 role=UserRole.SENDER.value,
                 verification_status=VerificationStatus.VERIFIED.value,
                 phone="+91 98450 33333",
-                latitude=12.9345,
-                longitude=77.6050,  # Koramangala / Adugodi, Bangalore
+                latitude=11.0300,
+                longitude=77.0100,  # Peelamedu, Coimbatore
                 created_at=now - timedelta(days=60),
             ),
         ]
@@ -130,8 +130,8 @@ def seed_database():
                 role=UserRole.RECIPIENT.value,
                 verification_status=VerificationStatus.VERIFIED.value,
                 phone="+91 98800 11111",
-                latitude=12.9785,
-                longitude=77.6010,  # Shivajinagar, Central Bangalore
+                latitude=11.0280,
+                longitude=76.9720,  # Gandhipuram, Coimbatore (~1.8 km)
                 created_at=now - timedelta(days=90),
             ),
             User(
@@ -143,8 +143,8 @@ def seed_database():
                 role=UserRole.RECIPIENT.value,
                 verification_status=VerificationStatus.VERIFIED.value,
                 phone="+91 98800 22222",
-                latitude=12.9850,
-                longitude=77.5920,  # Vasanth Nagar, Bangalore
+                latitude=11.0040,
+                longitude=76.9450,  # RS Puram, Coimbatore (~2.4 km)
                 created_at=now - timedelta(days=75),
             ),
             User(
@@ -156,8 +156,8 @@ def seed_database():
                 role=UserRole.RECIPIENT.value,
                 verification_status=VerificationStatus.VERIFIED.value,
                 phone="+91 98800 33333",
-                latitude=12.9640,
-                longitude=77.6150,  # Victoria Layout, Bangalore
+                latitude=11.0450,
+                longitude=76.9300,  # Peelamedu, Coimbatore (~4.2 km)
                 created_at=now - timedelta(days=50),
             ),
         ]
@@ -178,8 +178,8 @@ def seed_database():
                 food_preferences="all",
                 availability_start="07:00",
                 availability_end="23:00",
-                latitude=12.9785,
-                longitude=77.6010,
+                latitude=11.0280,
+                longitude=76.9720,
                 verification_status="VERIFIED",
                 created_at=now - timedelta(days=90),
             ),
@@ -194,8 +194,8 @@ def seed_database():
                 food_preferences="vegetarian",
                 availability_start="06:00",
                 availability_end="22:00",
-                latitude=12.9850,
-                longitude=77.5920,
+                latitude=11.0040,
+                longitude=76.9450,
                 verification_status="VERIFIED",
                 created_at=now - timedelta(days=75),
             ),
@@ -210,8 +210,8 @@ def seed_database():
                 food_preferences="all",
                 availability_start="09:00",
                 availability_end="21:00",
-                latitude=12.9640,
-                longitude=77.6150,
+                latitude=11.0450,
+                longitude=76.9300,
                 verification_status="VERIFIED",
                 created_at=now - timedelta(days=50),
             ),

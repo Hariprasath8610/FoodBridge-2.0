@@ -37,6 +37,13 @@ class Settings(BaseSettings):
     FIREBASE_CREDENTIALS_PATH: Optional[str] = None
     FIREBASE_PROJECT_ID: Optional[str] = None
 
+    # AI Surplus Prediction & Risk Classification Configuration
+    # Note: These are hackathon/demo calibrated thresholds (surplus percentage relative to planned meals)
+    SURPLUS_RISK_LOW_THRESHOLD: float = 5.0      # < 5% surplus -> LOW risk
+    SURPLUS_RISK_MEDIUM_THRESHOLD: float = 10.0  # 5% - 10% surplus -> MEDIUM risk
+    SURPLUS_RISK_HIGH_THRESHOLD: float = 20.0    # 10% - 20% surplus -> HIGH risk; > 20% -> CRITICAL risk
+    MODEL_VERSION: str = "foodbridge-surplus-v1"
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",

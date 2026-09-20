@@ -1,23 +1,32 @@
 class PredictionFactor {
+  final String name;
   final String factor;
   final String effect;
   final String description;
 
   const PredictionFactor({
+    required this.name,
     required this.factor,
     required this.effect,
     required this.description,
   });
 
   factory PredictionFactor.fromJson(Map<String, dynamic> json) {
+    final rawName = json['name']?.toString();
+    final rawFactor = json['factor']?.toString();
+    final factorStr = rawFactor ?? rawName ?? 'factor';
+    final nameStr = rawName ?? rawFactor ?? 'factor';
+
     return PredictionFactor(
-      factor: json['factor']?.toString() ?? '',
+      name: nameStr,
+      factor: factorStr,
       effect: json['effect']?.toString() ?? '',
       description: json['description']?.toString() ?? '',
     );
   }
 
   Map<String, dynamic> toJson() => {
+        'name': name,
         'factor': factor,
         'effect': effect,
         'description': description,
@@ -51,6 +60,7 @@ class PredictionRequest {
   Map<String, dynamic> toJson() {
     return {
       'expected_people': expectedPeople,
+      'planned_meals': plannedQuantity.round(),
       'planned_quantity': plannedQuantity.round(),
       'historical_attendance_rate': historicalAttendanceRate,
       'current_attendance': currentAttendance,
@@ -67,6 +77,7 @@ class PredictionRequest {
 class PredictionResponse {
   final String predictionId;
   final double predictedConsumption;
+  final double predictedSurplus;
   final double predictedSurplusMin;
   final double predictedSurplusMax;
   final double surplusPercentage;
@@ -74,11 +85,13 @@ class PredictionResponse {
   final String explanation;
   final List<PredictionFactor> factors;
   final double confidenceScore;
+  final String modelVersion;
   final String createdAt;
 
   const PredictionResponse({
     required this.predictionId,
     required this.predictedConsumption,
+    required this.predictedSurplus,
     required this.predictedSurplusMin,
     required this.predictedSurplusMax,
     required this.surplusPercentage,
@@ -86,18 +99,17 @@ class PredictionResponse {
     required this.explanation,
     required this.factors,
     this.confidenceScore = 0.88,
+    this.modelVersion = 'foodbridge-surplus-v1',
     required this.createdAt,
   });
-
-  /// Computed average surplus for display and mission dispatch
-  double get predictedSurplus =>
-      (predictedSurplusMin + predictedSurplusMax) / 2.0;
 
   factory PredictionResponse.fromJson(Map<String, dynamic> json) {
     final minSurplus =
         (json['predicted_surplus_min'] as num?)?.toDouble() ?? 0.0;
     final maxSurplus =
         (json['predicted_surplus_max'] as num?)?.toDouble() ?? minSurplus;
+    final rawSurplus = (json['predicted_surplus'] as num?)?.toDouble() ??
+        ((minSurplus + maxSurplus) / 2.0);
 
     final factorsRaw = json['factors'];
     List<PredictionFactor> factorList = [];
@@ -111,6 +123,7 @@ class PredictionResponse {
       predictionId: json['prediction_id']?.toString() ?? '',
       predictedConsumption:
           (json['predicted_consumption'] as num?)?.toDouble() ?? 0.0,
+      predictedSurplus: rawSurplus,
       predictedSurplusMin: minSurplus,
       predictedSurplusMax: maxSurplus,
       surplusPercentage:
@@ -119,6 +132,7 @@ class PredictionResponse {
       explanation: json['explanation']?.toString() ?? '',
       factors: factorList,
       confidenceScore: (json['confidence_score'] as num?)?.toDouble() ?? 0.88,
+      modelVersion: json['model_version']?.toString() ?? 'foodbridge-surplus-v1',
       createdAt:
           json['created_at']?.toString() ?? DateTime.now().toIso8601String(),
     );

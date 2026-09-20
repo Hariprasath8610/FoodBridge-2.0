@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "org.foodbridge.foodbridge_mobile"
+    namespace = "com.foodbridge.app"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -15,8 +15,8 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "org.foodbridge.foodbridge_mobile"
+        // Application ID configured for FoodBridge Android APK release
+        applicationId = "com.foodbridge.app"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

@@ -1,9 +1,10 @@
+import os
 from contextlib import asynccontextmanager
 from datetime import datetime
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
 from sqlalchemy import text
 
 from app.api import me, predictions_api, matching_api, recipients_api, rescues_api, dashboard_api
@@ -89,6 +90,7 @@ def root():
 
 
 @app.get("/health", response_model=HealthResponse, tags=["Health"])
+@app.get("/api/health", response_model=HealthResponse, tags=["Health"])
 def root_health():
     """Root health check endpoint verifying database, Firebase, and ML predictor status."""
     db_status = "connected"
@@ -106,6 +108,20 @@ def root_health():
         firebase="initialized" if firebase_service.is_initialized else "development_mock_mode",
         ml_model_loaded=predictor.is_loaded(),
         timestamp=datetime.utcnow().isoformat() + "Z",
+    )
+
+
+@app.get("/apk", tags=["APK Distribution"])
+@app.get("/download/apk", tags=["APK Distribution"])
+def download_release_apk():
+    """Serves the compiled FoodBridge Android release APK directly over Wi-Fi/LAN."""
+    apk_path = os.path.abspath("C:/FoodBridge 2.0/foodbridge-mobile/build/app/outputs/flutter-apk/app-release.apk")
+    if not os.path.exists(apk_path):
+        return JSONResponse(status_code=404, content={"detail": "APK not found on host disk."})
+    return FileResponse(
+        path=apk_path,
+        filename="FoodBridge-release.apk",
+        media_type="application/vnd.android.package-archive",
     )
 
 

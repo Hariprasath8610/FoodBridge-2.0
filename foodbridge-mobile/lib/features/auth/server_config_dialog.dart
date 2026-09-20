@@ -94,16 +94,17 @@ class _ServerConfigDialogState extends ConsumerState<ServerConfigDialog> {
               runSpacing: 8,
               children: [
                 ActionChip(
+                  avatar: const Icon(Icons.wifi_rounded, size: 16),
+                  label: const Text('Wi-Fi LAN (10.56.58.44)'),
+                  onPressed: () => _applyPreset('http://10.56.58.44:8000'),
+                ),
+                ActionChip(
                   label: const Text('Emulator (10.0.2.2)'),
                   onPressed: () => _applyPreset('http://10.0.2.2:8000'),
                 ),
                 ActionChip(
                   label: const Text('Host (127.0.0.1)'),
                   onPressed: () => _applyPreset('http://127.0.0.1:8000'),
-                ),
-                ActionChip(
-                  label: const Text('LAN (192.168.1.105)'),
-                  onPressed: () => _applyPreset('http://192.168.1.105:8000'),
                 ),
               ],
             ),
@@ -128,10 +129,12 @@ class _ServerConfigDialogState extends ConsumerState<ServerConfigDialog> {
           onPressed: () async {
             final text = _controller.text.trim();
             if (text.isNotEmpty) {
+              final nav = Navigator.of(context);
+              final messenger = ScaffoldMessenger.of(context);
               await ref.read(serverConfigProvider.notifier).updateBaseUrl(text);
               if (mounted) {
-                Navigator.of(context).pop();
-                ScaffoldMessenger.of(context).showSnackBar(
+                nav.pop();
+                messenger.showSnackBar(
                   SnackBar(
                     content: Text('Server URL set to: $text'),
                     backgroundColor: AppColors.primary,

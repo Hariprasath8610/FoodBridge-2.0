@@ -33,10 +33,10 @@ void main() {
       HttpOverrides.global = RealHttpOverrides();
       SharedPreferences.setMockInitialValues({});
       container = ProviderContainer();
-      // Configure base URL to local running FastAPI server on port 8000
+      // Configure base URL to local running FastAPI server on host LAN IP:8000
       await container
           .read(serverConfigProvider.notifier)
-          .updateBaseUrl('http://127.0.0.1:8000');
+          .updateBaseUrl('http://10.56.58.44:8000');
     });
 
     tearDown(() {

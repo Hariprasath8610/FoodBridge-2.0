@@ -1,0 +1,23 @@
+{
+  "mae": 8.76,
+  "rmse": 12.46,
+  "r2": 0.9974,
+  "model_type": "RandomForestRegressor",
+  "n_estimators": 100,
+  "test_samples": 900,
+  "train_samples": 3600,
+  "feature_importances": {
+    "current_attendance": 0.9987,
+    "historical_attendance_rate": 0.0003,
+    "historical_surplus_rate": 0.0002,
+    "planned_meals": 0.0002,
+    "expected_people": 0.0002,
+    "weather_condition_mild_rain": 0.0,
+    "menu_category_mixed": 0.0,
+    "day_of_week_thursday": 0.0,
+    "menu_category_north_indian": 0.0,
+    "menu_category_vegetarian": 0.0,
+    "menu_category_non_vegetarian": 0.0,
+    "day_of_week_wednesday": 0.0
+  }
+}

@@ -1,4 +1,4 @@
-package org.foodbridge.foodbridge_mobile
+package com.foodbridge.app
 
 import io.flutter.embedding.android.FlutterActivity
 
