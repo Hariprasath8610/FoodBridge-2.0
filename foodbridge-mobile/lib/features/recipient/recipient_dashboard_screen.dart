@@ -217,7 +217,7 @@ class RecipientDashboardScreen extends ConsumerWidget {
                     ),
                     ImpactMetricCard(
                       label: 'Food Received',
-                      value: '${impact.totalFoodKgRescued.toStringAsFixed(0)}',
+                      value: impact.totalFoodKgRescued.toStringAsFixed(0),
                       unit: 'kg',
                       icon: Icons.inventory_2_outlined,
                       accentColor: AppColors.secondary,

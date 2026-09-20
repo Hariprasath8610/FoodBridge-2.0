@@ -104,7 +104,7 @@ class RecipientProfileTab extends ConsumerWidget {
                   _buildProfileRow(
                     icon: Icons.business,
                     label: 'Organization Type',
-                    value: user?.organizationType?.replaceAll('_', ' ').toUpperCase() ??
+                    value: user?.organizationType.replaceAll('_', ' ').toUpperCase() ??
                         'COMMUNITY KITCHEN',
                   ),
                   const Divider(height: 24),
@@ -117,7 +117,7 @@ class RecipientProfileTab extends ConsumerWidget {
                   _buildProfileRow(
                     icon: Icons.place_outlined,
                     label: 'Service Area',
-                    value: 'Shivajinagar, Bangalore',
+                    value: 'Gandhipuram, Coimbatore',
                   ),
                   const Divider(height: 24),
                   _buildProfileRow(

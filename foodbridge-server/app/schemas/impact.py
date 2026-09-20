@@ -26,8 +26,16 @@ class DashboardImpactResponse(BaseModel):
 
 
 class PredictionFeedbackRequest(BaseModel):
-    predicted_quantity: float = Field(..., example=95.0, description="Predicted surplus quantity in meals")
-    actual_quantity: float = Field(..., example=88.0, description="Actual recorded surplus quantity in meals")
+    actual_surplus: Optional[float] = Field(None, example=75.0, description="Actual recorded surplus in meals")
+    actual_quantity: Optional[float] = Field(None, example=75.0, description="Alias for actual_surplus")
+    predicted_quantity: Optional[float] = Field(None, example=70.0, description="Predicted surplus in meals")
+
+    def get_actual(self) -> float:
+        if self.actual_surplus is not None:
+            return float(self.actual_surplus)
+        if self.actual_quantity is not None:
+            return float(self.actual_quantity)
+        raise ValueError("Either 'actual_surplus' or 'actual_quantity' must be provided.")
 
 
 class PredictionFeedbackResponse(BaseModel):

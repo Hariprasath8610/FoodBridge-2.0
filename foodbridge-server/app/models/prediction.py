@@ -24,14 +24,20 @@ class Prediction(Base):
 
     # Output Predictions & Uncertainty
     predicted_consumption = Column(Float, nullable=False)
+    predicted_surplus = Column(Float, nullable=True)
     predicted_surplus_min = Column(Float, nullable=False)
     predicted_surplus_max = Column(Float, nullable=False)
     surplus_percentage = Column(Float, nullable=False)
     risk_level = Column(String(20), nullable=False)
+    model_version = Column(String(50), default="foodbridge-surplus-v1", nullable=True)
     explanation = Column(Text, nullable=True)
     factors_json = Column(Text, nullable=True)
 
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
+
+    @property
+    def planned_meals(self) -> int:
+        return self.planned_quantity
 
     # Relationship to User
     provider = relationship("User", back_populates="predictions")
